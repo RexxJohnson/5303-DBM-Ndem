@@ -1,0 +1,1 @@
+SELECT SUM(ST_Distance_Sphere(b.Location,b1.Location))/500 as Totaldistance FROM A06_Routes a,A06_Airports b,A06_Airports b1 WHERE b.IATA=a.Sourceairport and b1.IATA = a.Destinationairport 
