@@ -10,8 +10,9 @@ with open(csvFilePath) as csvFile:
     for rows in csvReader:
         id = rows['id']
         data[id] = rows
+        
 
 #create json
 with open(jsonFilePath, 'w') as jsonFile:
-    
+
     jsonFile.write(json.dumps(data, indent=4))
